@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import ProdutosListar from "./pages/produtos-listar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <div id="App" className="min-h-screen bg-gray-100 text-gray-900">
+            <BrowserRouter>
+                <nav className="bg-blue-500 p-4">
+                    <ul className="flex space-x-4 max-w-5xl mx-auto">
+                        <li>
+                            <img 
+                                src="https://avatars.pfptown.com/731/thumb-512-pink-anime-5969.webp" 
+                                alt="Logo"
+                                className="max-w-10 h-auto rounded-lg shadow-lg" 
+                            />
+                        </li>
+                        <li>
+                            <Link to="/" className="text-white hover:text-gray-200">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/produtos" className="text-white hover:text-gray-200">Produtos</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/produtos" element={<ProdutosListar />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
-export default App
+function Home() {
+    return <h2 className="max-w-5xl mx-auto text-xl">Página Inicial</h2>;
+}
+
+export default App;
