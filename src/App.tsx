@@ -8,11 +8,7 @@ function App() {
                 <nav className="bg-blue-500 p-4">
                     <ul className="flex space-x-4 max-w-5xl mx-auto">
                         <li>
-                            <img 
-                                src="https://avatars.pfptown.com/731/thumb-512-pink-anime-5969.webp" 
-                                alt="Logo"
-                                className="max-w-10 h-auto rounded-lg shadow-lg" 
-                            />
+                            <img src="/src/assets/varv.png" alt="Homem negro" className="max-w-10 h-auto rounded-lg shadow-lg"></img>
                         </li>
                         <li>
                             <Link to="/" className="text-white hover:text-gray-200">Home</Link>
