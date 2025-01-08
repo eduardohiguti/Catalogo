@@ -1,5 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import ProdutosListar from "./pages/produtos-listar";
+import React from "react";
 
 function App() {
     return (
@@ -28,7 +29,7 @@ function App() {
 }
 
 function Home() {
-    return <h2 className="max-w-5xl mx-auto text-xl">Página Inicial</h2>;
+    return <h1 className="text-2xl font-bold">Página Inicial</h1>;
 }
 
 export default App;
