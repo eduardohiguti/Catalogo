@@ -11,7 +11,7 @@ function ProdutosListar() {
     }, []);
 
     function carregarProdutos() {
-        axios.get<Produto[]>("https://api.exemplo.com/produtos")
+        axios.get<Produto[]>("http://localhost:8080/produtos")
             .then((resposta) => {
                 setProduto(resposta.data);
             })

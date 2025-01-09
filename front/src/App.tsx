@@ -29,7 +29,11 @@ function App() {
 }
 
 function Home() {
-    return <h1 className="text-2xl font-bold">Página Inicial</h1>;
+    return (
+        <div className="max-w-5xl mx-auto">
+            <h1 className="text-2xl font-bold">Página Inicial</h1>
+        </div>
+    );
 }
 
 export default App;
